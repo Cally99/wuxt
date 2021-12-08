@@ -44,6 +44,7 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '~/modules/static/',
+    ["nuxt-buefy"],
     [
       '~/modules/wp-api/index',
       {

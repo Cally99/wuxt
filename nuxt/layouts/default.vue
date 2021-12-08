@@ -1,41 +1,26 @@
 <template>
   <div>
-    <header class="header">
-      <Logo/>
+    <AppHeader />
+    <Nuxt />
 
-      <nav class="header__nav">
-        <nuxt-link to="/hello-world">Hello World</nuxt-link>
-        <nuxt-link to="/sample-page">Sample Page</nuxt-link>
-      </nav>
-    </header>
-    <nuxt class="container"/>
+    <div>
+    <a>"Why isnt this working </a>
+    </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo'
+import AppHeader from "~/components/AppHeader";
 
 export default {
-  components: {
-    Logo
-  }
-}
+  components: { AppHeader },
+};
 </script>
 
-
-<style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Nunito:700,600,400|Open+Sans:400,700');
-$primary: #37495c;
-$secondary: #48b884;
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
+<style>
 html {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -43,6 +28,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  color: #2E495E;
 }
 
 *,
@@ -52,71 +38,42 @@ html {
   margin: 0;
 }
 
-a {
-  color: #48b884;
-  text-decoration: none;
-
-  &:hover {
-    color: darken($color: #48b884, $amount: 10);
-  }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Nunito';
-  font-weight: 700;
-}
-
 .container {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-.wp {
-  &__title {
-    margin-bottom: 30px;
-  }
-
-  &__content {
-    * {
-      &:nth-child(1n + 2) {
-        margin-top: 1rem;
-      }
-    }
-
-    p {
-      line-height: 1.8rem;
-    }
-  }
-}
-
-.header {
-  position: relative;
-
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
 
-  margin-top: 100px;
-  margin-bottom: 50px;
-  padding-bottom: 50px;
+.button--green {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #00C48D;
+  color: #00C48D;
+  text-decoration: none;
+  padding: 10px 30px;
+  display: inline-flex;
+  align-self: center;
+}
 
-  border-bottom: 2px solid #ececec;
+.button--green:hover {
+  color: #fff;
+  background-color: #00C48D;
+}
 
-  &__nav {
-    margin-top: 10px;
+.button--grey {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #2E495E;
+  color: #2E495E;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-left: 15px;
+}
 
-    a {
-      margin: 5px;
-    }
-  }
+.button--grey:hover {
+  color: #fff;
+  background-color: #2E495E;
 }
 </style>
